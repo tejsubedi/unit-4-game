@@ -19,7 +19,7 @@ var resetAndStart = function() {
 
 random_result = Math.floor(Math.random() * 101) + 19; //hoisting
 console.log(random_result);
-$("#result").html("Random Result:  " + random_result);
+$("#result").html("Random Num: " + random_result);
 
 for(var i =0; i < 4; i++){
 
