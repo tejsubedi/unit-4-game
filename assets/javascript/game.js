@@ -12,10 +12,10 @@ var resetAndStart = function() {
     $(".crystals").empty();
 
     var images = [
-        "../assets/images/myCrystal3.png",
-        "../assets/images/myCrystal4.png",
-        "../assets/images/myCrystal5.png ",
-        "../assets/images/myCrystal6.png "];
+        "assets/images/myCrystal3.png",
+        "assets/images/myCrystal4.png",
+        "assets/images/myCrystal5.png ",
+        "assets/images/myCrystal6.png "];
 
 random_result = Math.floor(Math.random() * 101) + 19; //hoisting
 console.log(random_result);
@@ -73,7 +73,7 @@ $(document).on('click',".crystal", function() {
     } else if(previous === random_result){
         win++;
 
-        $("#win").html("You win" +  win);
+        $("#win").html("You win: " +  win);
 
 
         previous = 0;
