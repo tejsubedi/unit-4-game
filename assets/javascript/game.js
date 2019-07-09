@@ -11,6 +11,12 @@ var previous = 0;
 var resetAndStart = function() {
     $(".crystals").empty();
 
+    var images = [
+        "../assets/images/myCrystal3.png",
+        "../assets/images/myCrystal4.png",
+        "../assets/images/myCrystal5.png ",
+        "../assets/images/myCrystal6.png "];
+
 random_result = Math.floor(Math.random() * 69) + 30; //hoisting
 console.log(random_result);
 $("#result").html("Random Result:  " + random_result);
@@ -24,6 +30,12 @@ for(var i =0; i < 4; i++){
     crystal.attr({
         "class": 'crystal',
         "data-random": random
+    });
+
+    crystal.css({
+        "background-image":"url('" + images[i] + "')"
+        // "background":"red"
+        
     });
 
     crystal.html(random);
@@ -49,7 +61,7 @@ $(document).on('click',".crystal", function() {
     console.log(previous);
 
     if(previous > random_result){
-        lost--;
+        lost++;
 
         $("#lost").html("You lost" + lost);
 
