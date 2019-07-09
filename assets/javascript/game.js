@@ -17,7 +17,7 @@ var resetAndStart = function() {
         "../assets/images/myCrystal5.png ",
         "../assets/images/myCrystal6.png "];
 
-random_result = Math.floor(Math.random() * 69) + 30; //hoisting
+random_result = Math.floor(Math.random() * 101) + 19; //hoisting
 console.log(random_result);
 $("#result").html("Random Result:  " + random_result);
 
@@ -33,12 +33,13 @@ for(var i =0; i < 4; i++){
     });
 
     crystal.css({
-        "background-image":"url('" + images[i] + "')"
-        // "background":"red"
+        "background-image":"url('" + images[i] + "')",
+        "background-size":"cover",
+        "background-repeat":"no-repeat"
         
     });
 
-    crystal.html(random);
+   // crystal.html(random);
 
     $(".crystals").append(crystal);
     
@@ -63,7 +64,7 @@ $(document).on('click',".crystal", function() {
     if(previous > random_result){
         lost++;
 
-        $("#lost").html("You lost" + lost);
+        $("#lost").html("You lost: " + lost);
 
         previous = 0;
 
